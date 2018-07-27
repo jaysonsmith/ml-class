@@ -27,8 +27,12 @@ y_train = keras.utils.to_categorical(y_train, num_classes)
 y_test = keras.utils.to_categorical(y_test, num_classes)
 
 model = Sequential()
-model.add(Conv2D(32, (3, 3), padding='same',
+model.add(Conv2D(32, (5, 5), padding='same',
                  input_shape=x_train.shape[1:], activation='relu'))
+model.add(MaxPooling2D(pool_size=(2, 2)))
+model.add(Dropout(0.25))
+model.add(Conv2D(32, (3, 3), padding='same',
+                 input_shape=(16, 16, 3), activation='relu'))
 model.add(MaxPooling2D(pool_size=(2, 2)))
 model.add(Dropout(0.25))
 
@@ -52,7 +56,10 @@ x_test /= 255
 
 
 datagen = ImageDataGenerator(
-        width_shift_range=0.1)
+        width_shift_range=0.1,
+        height_shift_range=0.1,
+        rotation_range=5,
+        horizontal_flip=True)
 
 
 datagen.fit(x_train)
