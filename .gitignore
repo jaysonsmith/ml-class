@@ -1,4 +1,2 @@
-wandb-debug.log
-**/wandb/*
-!**/wandb/settings
-keras-sign/sign-language
+.ipynb_checkpoints
+wandb/*
