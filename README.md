@@ -2,6 +2,8 @@
 
 These are materials I use for a class on machine learning with scikit-learn, keras and tensorflow.  Each file is a self contained unit that demonstrates a specific thing.  Downloading or cloning this repository before class is a great way to follow along.
 
+NOTE: this is Jayson's fork of the repo
+
 # Reusing the materials
 
 Please feel free to use these materials for your own classes/projects etc.  If you do that, I would love it if you sent me a message and let me know what you're up to.
